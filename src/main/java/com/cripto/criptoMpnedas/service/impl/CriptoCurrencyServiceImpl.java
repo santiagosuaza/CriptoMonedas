@@ -40,7 +40,7 @@ public class CriptoCurrencyServiceImpl implements CriptoCurrencyService {
 
     @Override
     public CriptoCurrency updateRank(Long id, Long quoteId) {
-        double precio = 0;
+        double may = 0;
         double priceUDS = 0;
         CriptoCurrency currey =getCyroCryptocurrency(id);
         if (currey != null) {
@@ -58,8 +58,8 @@ public class CriptoCurrencyServiceImpl implements CriptoCurrencyService {
                         priceUDS = cuota.getPrices();
                         cuota.setPrices(priceUDS);
                     }
-                    if (precio < priceUDS) {
-                        precio = priceUDS;
+                    if (may < priceUDS) {
+                        may= priceUDS;
                         currey.setRank(cuota.getId());
                     }
                 }

@@ -42,8 +42,9 @@ public class QuoteServiceImp implements QuoteService {
                 }
             }
         }
+            quoteRepository.save(quote);
             criptoCurrencyService.updateRank(quote.getCriptocurrency().getId(), quote.getId());
-            return quoteRepository.save(quote);
+            return quote;
     }
     @Override
     public List<Quote> findByName(String name) {

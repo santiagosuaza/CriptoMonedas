@@ -37,7 +37,7 @@ public class CriptoCurrencyController {
     }
 
     @GetMapping
-    public List<CriptoCurrency> getAllCriptoCurrency() {
+    public List<Cript6oCurrency> getAllCriptoCurrency() {
         return criptoCurrencyService.listAllCryptocurrencies();
     }
 
